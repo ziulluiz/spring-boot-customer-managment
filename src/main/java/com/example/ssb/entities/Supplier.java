@@ -15,9 +15,8 @@ import lombok.ToString;
 public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String firstname;
-    private String lastname;
+    private Long supplier_id;
+    private String name;
     private String email;
     private String phone;
     private String address;

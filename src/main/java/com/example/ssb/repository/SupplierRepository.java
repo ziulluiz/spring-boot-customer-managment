@@ -1,9 +1,9 @@
 package com.example.ssb.repository;
 
-import com.example.ssb.entities.Customer;
+import com.example.ssb.entities.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface SupplierRepository extends JpaRepository<Supplier, Long> {
 }

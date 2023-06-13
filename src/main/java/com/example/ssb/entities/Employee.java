@@ -15,7 +15,7 @@ import lombok.ToString;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long employee_id;
     private String name;
     private String email;
     private String phone;
