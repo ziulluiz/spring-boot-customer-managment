@@ -1,7 +1,8 @@
 package com.example.ssb.controllers;
 
-import com.example.ssb.entities.Customer;
+import com.example.ssb.entities.Supplier;
 import com.example.ssb.services.ICustomerService;
+import com.example.ssb.services.ISupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,13 +10,13 @@ import java.util.List;
 @RestController
 public class SupplierController {
     @Autowired
-    private ICustomerService service;
+    private ISupplierService service;
     @GetMapping("/api/suppliers")
-    public List<Customer> getAll(){
+    public List<Supplier> getAll(){
         return service.getAll();
     }
     @GetMapping("/api/suppliers/{id}")
-    public Customer getById(@PathVariable String id) {
+    public Supplier getById(@PathVariable String id) {
         return service.getById(Long.parseLong(id));
     }
     @DeleteMapping("/api/suppliers/{id}")
@@ -23,7 +24,7 @@ public class SupplierController {
         service.remove(Long.parseLong(id));
     }
     @PostMapping("/api/suppliers")
-    public  void save(@RequestBody Customer customer){
-        service.save(customer);
+    public  void save(@RequestBody Supplier supplier){
+        service.save(supplier);
     }
 }
