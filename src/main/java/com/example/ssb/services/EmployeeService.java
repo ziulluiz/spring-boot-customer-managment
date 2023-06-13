@@ -11,25 +11,25 @@ import java.util.List;
 @Service
 public class EmployeeService implements IEmployeeService {
     @Autowired
-    private EmployeeRepository repository;
+    private EmployeeRepository employeeRepository;
     @Override
     public List<Employee> getAll(){
-        return repository.findAll();
+        return employeeRepository.findAll();
     }
     @Override
     public Employee getById(Long id) {
 
-        return (Employee) repository.findById(id).get();
+        return (Employee) employeeRepository.findById(id).get();
     }
     @Override
     public void remove(Long id){
 
-        repository.deleteById(id);
+        employeeRepository.deleteById(id);
     }
     @Override
     public  void save(Employee employee){
 
-        repository.save(employee);
+        employeeRepository.save(employee);
     }
 
 }
