@@ -15,4 +15,12 @@ public class CustomerService implements ICustomerService {
     public List<Customer> getAll(){
         return repository.findAll();
     }
+    @Override
+    public Customer getById(Long id) {
+        return (Customer) repository.findById(id).get();
+    }
+
+    public void remove(Long id){
+        repository.deleteById(id);
+    }
 }
