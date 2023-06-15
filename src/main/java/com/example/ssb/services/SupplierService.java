@@ -3,9 +3,10 @@ package com.example.ssb.services;
 import com.example.ssb.entities.Supplier;
 import com.example.ssb.repository.SupplierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class SupplierService implements ISupplierService {
     @Autowired
     private SupplierRepository supplierRepository;

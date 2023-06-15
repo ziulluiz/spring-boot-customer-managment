@@ -1,7 +1,6 @@
 package com.example.ssb.controllers;
 
 import com.example.ssb.entities.Supplier;
-import com.example.ssb.services.ICustomerService;
 import com.example.ssb.services.ISupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
